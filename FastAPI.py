@@ -45,7 +45,7 @@ class MentalHealthModel(BaseModel):
 
 @app.post("/predict_mentalHealth/")
 async def predict_mentalHealth(item: MentalHealthModel):
-    load_ann = load_model('bitirmeProjesi.h5')
+    load_ann = load_model('bitirme_projesi.h5')
     
     sc = StandardScaler()
     data = pd.DataFrame([item.dict()])
